@@ -1,0 +1,592 @@
+/* GLOBAL STYLES */
+html,
+body {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    scroll-padding-top: 80px;
+
+}
+
+
+/* BACKGROUND */
+body {
+    background-color: #FAF7F0;
+    /* Soft neutral background */
+    color: #2C2C2C;
+    /* Dark gray for better contrast */
+    padding-top: 80px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    /* Adjust transparency */
+    z-index: -1;
+}
+
+.img-fluid {
+    align-items: center;
+}
+
+
+/* Apply Cormorant Garamond for major headings */
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Use EB Garamond for main body text */
+body,
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    /* Keeps good readability */
+}
+
+
+
+/* === SECTION BACKGROUNDS === */
+#herocard {
+    background-color: #EADDCA;
+}
+
+#works {
+    background-color: #FAF7F0;
+    /* Keep it clean */
+}
+
+
+/* HERO SECTION */
+#herocard {
+
+    padding: 40px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-uppercase {
+    text-transform: none !important;
+}
+
+
+/* BIOGRAPHY SECTION */
+#biography {
+    background-size: cover;
+    color: #5c3d2e;
+    /* Elegant brown tone */
+    padding: 60px 20px;
+}
+
+#biography img {
+    width: 250px;
+    /* Increased image size */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    background: #FFFAFA;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    border-left: 4px solid #562c2c;
+    /* Brown left border */
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-body {
+    padding: 25px;
+    text-align: left;
+    /* Left-aligned text */
+}
+
+.card-title {
+    color: #5c3d2e;
+    /* Elegant brown tone */
+}
+
+/* Add spacing to the top of the full-width card */
+#biography .row.g-4 {
+    margin-top: 30px;
+    /* Add top margin for spacing */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Additional styling for full-width card */
+#biography .col-12 {
+    margin-top: 30px;
+    /* Space above the full-width card */
+}
+
+
+/* WORKS PAGE */
+#works {
+    padding: 60px 20px;
+    background-color: var(--light);
+}
+
+#works h2 {
+    color: #5c3d2e;
+}
+
+.works-title {
+    font-family: 'Literata', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #5c3d2e;
+}
+
+/* Plot Summary Section */
+.plot-card {
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #FFFAFA;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #8B5E3C;
+    /* Brown left border */
+}
+
+.plot-card:hover {
+    transform: scale(1.02);
+}
+
+.plot-card h5 {
+    font-family: 'Cormorant Garamond', serif;
+    /* Match with headers */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.plot-card p {
+    font-family: 'EB Garamond', serif;
+    /* Match with body text */
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+/* === ANALYSIS SECTION === */
+#analysis {
+    padding: 60px 20px;
+}
+
+/* Section Title */
+#analysis h2 {
+    color: #5c3d2e;
+}
+
+/* Accordion Styling */
+.accordion-button {
+    background-color: #EADDCA;
+    color: #5c3d2e;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.accordion-button:hover {
+    background-color: #d7c0a6;
+}
+
+.accordion-body {
+    background: #fff;
+    border-left: 4px solid #8B5E3C;
+    padding: 20px;
+}
+
+/* Blockquote Styling */
+.blockquote {
+    font-style: italic;
+    border-left: 5px solid #8B5E3C;
+}
+
+.blockquote-footer {
+    font-size: 0.9rem;
+    color: #5c3d2e;
+}
+
+/* Removes blue highlight when clicking accordion */
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Removes background color and shadow when accordion is expanded */
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    /* Keeps background unchanged */
+    box-shadow: none !important;
+    color: inherit !important;
+    /* Ensures text color remains */
+}
+
+.reflection {
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #FFFAFA;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #8B5E3C;
+    /* Brown left border */
+}
+
+.reflection:hover {
+    transform: scale(1.02);
+}
+
+
+/* GALLERY SECTION */
+/* Gallery Item Styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Add a border to the entire gallery grid */
+#gallery .container {
+    border: 5px solid #81544F;
+    padding: 20px;
+}
+
+/* Optional: Add a subtle shadow to the gallery frame */
+#gallery .container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Add a shadow for depth */
+    /* Light shadow for the border */
+}
+
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-description {
+    font-size: 1rem;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.gallery-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #BC8A73;
+}
+
+.gallery-footer i {
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+/* Optional: Style for photo credits */
+.gallery-footer {
+    font-size: 0.7rem;
+    font-family: 'Istok Web', sans-serif;
+    color: #fff;
+}
+
+/* Flexbox Layout to support Masonry Effect */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Space between columns */
+}
+
+.col-md-4 {
+    margin-bottom: 1.5rem;
+    /* Add some spacing between items */
+}
+
+/* Disable hover effect for video item */
+.video-item:hover .gallery-overlay {
+    opacity: 0; /* Prevents overlay from showing */
+  }
+  
+  .video-item iframe {
+    pointer-events: auto; /* Ensures iframe is clickable */
+  }
+  
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%; /* For smaller screens, make images full-width */
+    }
+    .gallery-item:active .gallery-overlay { /* Show overlay on mobile when tapped */
+        opacity: 1;
+    }
+    
+}
+
+
+/*RESOURCES SECTION*/
+/* Specific Styling for Resources Card */
+#resources h2{
+    padding-top: 40px;
+}
+#resources .resources-card {
+    border: 1px solid #ddd; /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden;
+  }
+  
+  #resources .resources-card .card-body {
+    padding: 30px;
+  }
+  
+  #resources .resources-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2C2023; /* Matching your color scheme */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #resources .resources-card h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #482A2A; /* Slightly lighter shade for subheadings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #resources .resources-card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #resources .resources-card ul li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  #resources .resources-card ul li a {
+    color: #81544F; /* Matching your color palette */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #resources .resources-card ul li a:hover {
+    color: #BC8A73; /* Lighter color on hover for effect */
+    text-decoration: underline;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    #resources .resources-card .card-body {
+      padding: 20px;
+    }
+  
+    #resources .resources-card .card-title {
+      font-size: 1.3rem;
+    }
+  
+    #resources .resources-card h6 {
+      font-size: 1rem;
+    }
+  
+    #resources .resources-card ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  
+
+
+
+/* LOGO STYLES */
+.logo {
+    height: 80px;
+    object-fit: contain;
+    width: auto;
+}
+
+/* NAVBAR STYLES */
+.navbar {
+    background-color: #f0eeec;
+    /* Dark Coffee */
+    height: 80px;
+    /* Fixed height for navbar */
+    padding: 0;
+    /* Remove extra padding */
+    display: flex;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+/* Navbar use Istok Web for a clean modern look */
+.navbar-nav .nav-link {
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: #81544F;
+    /* Medium Brown on hover */
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #2C2203;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #BC8A73;
+    /* Lighter Coffee */
+}
+
+.nav-link.active {
+    color: #BC8A73 !important;
+    /* Ensures visibility */
+    font-weight: 900;
+    /* Slightly bolder */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* OFFCANVAS MENU */
+.offcanvas {
+    top: 0;
+    height: 100vh;
+}
+
+
+/* SCROLLBAR STYLING */
+/* For Webkit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #E5E4E2;
+    /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Scrollbar color */
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Darker color when hovered */
+}
+
+/* RESPONSIVE DESIGN (TABLETS & DESKTOP) */
+@media (min-width: 768px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #967969;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
